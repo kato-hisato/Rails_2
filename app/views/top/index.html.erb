@@ -1,0 +1,9 @@
+<h1>宿泊予約アプリ</h1>
+
+<p class="top-title" >施設検索</p>
+<div class="FirstViewSearch" >
+  <%= form_with(url: search_rooms_path, method: :get, html: { class: 'form-container' } ) do |form| %>
+    <%= form.text_field :area, placeholder: "エリアを検索" , class: "form-controler" %>
+    <%= form.submit "検索" ,class: "FirstViewSearch__button" %>
+  <% end %>
+</div>

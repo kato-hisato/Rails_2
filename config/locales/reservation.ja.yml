@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    attributes:
+      reservation:
+        start_day: "チェックイン日"
+        end_day: "チェックアウト日"
+        people: "人数"
+    errors:
+      models:
+        reservation:
+          attributes:
+            start_day:
+              blank: "が入力されていません"
+            end_day:
+              blank: "が入力されていません"
+            people:
+              blank: "が入力されていません"
+            base:
+              invalid_dates: "チェックアウト日はチェックイン日より後の日付を選択してください"

@@ -1,0 +1,25 @@
+<h1 class="mb-3">ユーザー情報編集</h1>
+
+<div class="container" >
+  <%= form_with model: current_user, url: { action: 'profile_update' } do |f| %>
+ 
+    <div class="field">
+      <%= f.label :image %><br/>
+      <%= f.file_field :image, class:"form-control" %>
+    </div>
+ 
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, class:"form-control" %>
+    </div>
+ 
+    <div class="field">
+      <%= f.label :profile %><br />
+      <%= f.text_area :profile, class:"form-control" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "更新" %>
+    </div>
+  <% end %>
+  <%= link_to "戻る", :back %>
+</div>

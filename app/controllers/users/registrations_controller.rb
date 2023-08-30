@@ -4,6 +4,24 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
+  def profile_show
+    @user = current_user
+    @img = current_user.image
+  end
+
+  def profile_edit
+
+  end
+   
+  def profile_update
+    current_user.assign_attributes(account_update_params)
+    if current_user.save
+      redirect_to profile_show_path, notice: "プロフィール情報を更新しました"      
+    else
+      render "profile_edit"
+    end
+  end
+
   # GET /resource/sign_up
   # def new
   #   super

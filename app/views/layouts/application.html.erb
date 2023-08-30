@@ -11,6 +11,32 @@
   </head>
 
   <body>
+    <header>
+      <div class="nav-ber">
+        <a href="http://localhost:3000/" class="nav-title">宿泊予約アプリ</a>
+        <!-- ログインしている場合の表示 -->
+        <% if user_signed_in? %>
+          <div class="btn-container" >  
+            <div id="mypageBtnContainer" class="btn-name"><%= display_user_avatar(current_user, class: 'btn-img') %><span><%= current_user.name %></span></div>
+            <div class="dropdown-menu" id="mypageDropdown"><!--ドロップダウンリスト-->
+              <ul>
+                <li class="drop-list" ><%= link_to "施設の新規登録", "/rooms/new" %></li>
+                <li class="drop-list" ><%= link_to "予約一覧", "/reservations/index" %></li>
+                <li class="drop-list" ><%= link_to "登録施設一覧", "/rooms/index" %></li>
+	              <li class="drop-list" ><%= link_to "アカウント詳細", "/users/show" %></li>
+	              <li class="drop-list" ><%= link_to "ログアウト", "/users/sign_out", method: :delete %></li>
+	            </ul>
+            </div>
+          </div>
+        </div>
+      <% else %>
+      <!-- ログインしていない場合の表示 -->
+        <div class="btn-container">
+          <%= link_to "ログイン", "/users/sign_in", class: "btn-head" %>
+          <%= link_to "新規登録", "/users/sign_up", class: "btn-head" %>
+        </div>
+      <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>
