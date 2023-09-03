@@ -1,5 +1,9 @@
 <h1>宿泊予約アプリ</h1>
 
+<% if flash[:notice] %>
+  <p class="notice subTitle"><%= flash[:notice] %></p>
+<% end %>
+
 <p class="top-title" >施設検索</p>
 
 <div class="FirstViewSearch" >

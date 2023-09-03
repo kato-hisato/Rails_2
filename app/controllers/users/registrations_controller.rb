@@ -12,15 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   end
    
-  def update
-    current_user.assign_attributes(account_update_params)
-    if current_user.save
-      redirect_to profile_show_path, notice: "アカウント情報を更新しました"      
-    else
-      render "edit_user_registration"
-    end
-  end
-
+  
   def profile_show
     @user = current_user
     @img = current_user.image

@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   get 'reservations/index'
   get 'rooms/index'
   root 'top#index'
-  get 'users/show'
-  put '/users/show', to: 'users#show'
+  
   
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -13,6 +12,8 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
+    get 'show', to: 'users/registrations#show'
+    put 'show', to: 'users/registrations#show'
     get 'profile_show', to: 'users/registrations#profile_show', as: 'profile_show'
     get 'profile_edit', to: 'users/registrations#profile_edit', as: 'profile_edit'
     patch 'profile_update', to: 'users/registrations#profile_update', as: 'profile_update'
