@@ -255,3 +255,25 @@ li {
   flex-direction: column;
   justify-content: center; 
 }
+
+.RecommendAreas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.RecommendArea {
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  margin: auto;
+}
+
+.Area_search__button {
+  background-color:  #4cf30a;
+  border-radius: 26px;
+  padding: 20px 60px;
+  font-size: larger;
+
+}

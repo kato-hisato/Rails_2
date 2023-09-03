@@ -44,11 +44,11 @@
       <div>
         <div class="form-resevation">
           <%= f.label :start_day ,"チェックイン日" %><br/>
-          <%= f.date_field :start_day, class:"form-control"  %>
+          <%= f.date_field :start_day, class:"form-control", min: Date.current %>
         </div>  
         <div class="form-resevation">
           <%= f.label :end_day ,"チェックアウト日" %><br/>
-          <%= f.date_field :end_day, class:"form-control" %>
+          <%= f.date_field :end_day, class:"form-control", min: Date.current %>
         </div>  
         <div class="form-resevation">
           <%= f.label :people ,"人数" %><br/>

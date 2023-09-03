@@ -1,4 +1,7 @@
 class ReservationsController < ApplicationController
+  
+  before_action :authenticate_user!
+  
   #自分の予約だけ表示
   def index
     @user = current_user

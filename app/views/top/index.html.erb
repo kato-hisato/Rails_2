@@ -1,9 +1,44 @@
 <h1>宿泊予約アプリ</h1>
 
 <p class="top-title" >施設検索</p>
+
 <div class="FirstViewSearch" >
   <%= form_with(url: search_rooms_path, method: :get, html: { class: 'form-container' } ) do |form| %>
     <%= form.text_field :area, placeholder: "エリアを検索" , class: "form-controler" %>
     <%= form.submit "検索" ,class: "FirstViewSearch__button" %>
   <% end %>
+</div>
+
+<h1>おすすめのエリア</h1>
+
+<div class="RecommendAreas" >
+  
+  <div class="RecommendArea" >
+    <%= form_with(url: search_rooms_path, method: :get ) do |form| %>
+      <%= form.hidden_field :area, value: "東京" %>
+      <%= form.submit "東京", class: "Area_search__button" %>
+    <% end %>
+  </div>
+
+  <div class="RecommendArea" >
+    <%= form_with(url: search_rooms_path, method: :get ) do |form| %>
+      <%= form.hidden_field :area, value: "大阪" %>
+      <%= form.submit "大阪" ,class: "Area_search__button" %>
+    <% end %>
+  </div>
+
+  <div class="RecommendArea" >
+    <%= form_with(url: search_rooms_path, method: :get ) do |form| %>
+      <%= form.hidden_field :area, value: "京都" %>
+      <%= form.submit "京都" ,class: "Area_search__button" %>
+    <% end %>
+  </div>
+
+  <div class="RecommendArea" >
+    <%= form_with(url: search_rooms_path, method: :get ) do |form| %>
+      <%= form.hidden_field :area, value: "札幌" %>
+      <%= form.submit "札幌" ,class: "Area_search__button" %>
+    <% end %>
+  </div>
+
 </div>

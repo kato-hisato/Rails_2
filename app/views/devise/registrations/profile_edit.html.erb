@@ -2,7 +2,7 @@
 
 <div class="container" >
   <%= form_with model: current_user, url: { action: 'profile_update' } do |f| %>
- 
+    
     <div class="field">
       <%= f.label :image %><br/>
       <%= f.file_field :image, class:"form-control" %>

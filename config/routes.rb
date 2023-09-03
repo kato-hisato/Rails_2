@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'rooms/index'
   root 'top#index'
   get 'users/show'
+  put '/users/show', to: 'users#show'
   
   devise_for :users, controllers: {
     registrations: 'users/registrations',

@@ -5,6 +5,10 @@
     <%= link_to "編集", "/users/edit" , class: "link-edit" %>
 </div>
 
+<% if flash[:notice] %>
+  <p class="notice subTitle"><%= flash[:notice] %></p>
+<% end %>
+
 <div class="user-profile">
   <div class="info-container">
     <div class="info-section">
