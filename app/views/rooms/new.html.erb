@@ -1,0 +1,38 @@
+<!--施設作成-->
+<h1>新規登録</h1>
+
+<div class="container">
+  <%= render "shared/error", obj: @room %>
+  <%= form_with model: @room do |f| %>
+    
+    <div>
+      <%= f.label :name ,"施設名" %><br/>
+      <%= f.text_field :name, class:"form-control" %>
+    </div>
+    <div>
+      <%= f.label :introduction ,"施設詳細" %><br/>
+      <%= f.text_area :introduction, class:"form-control" %>
+    </div>
+    <div>
+      <%= f.label :price ,"料金" %><br/>
+      <%= f.text_field :price, placeholder: "半角数字のみ", class:"form-control" %>
+    </div>
+    <div>
+      <%= f.label :address ,"住所" %><br/>
+      <%= f.text_field :address, class:"form-control" %>
+    </div>
+    <div>
+      <%= f.label :image ,"画像"%><br/>
+      <%= f.file_field :image, class:"form-control" %>
+    </div>
+
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
+    <div>
+      <ul>
+        <li><%= f.submit "登録完了する"%></li>
+        <li><%= link_to "キャンセル", "/rooms/index" %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,29 @@
+<!--検索フォーム-->
+<div class="header-field">
+  <div class="search-field">
+    <%= form_with(url: search_rooms_path, method: :get) do |form| %>
+      <%= form.text_field :keyword, placeholder: "部屋名または詳細を検索", class:"form-control" %>
+      <%= form.text_field :area, placeholder: "エリアを検索", class:"form-control" %>
+      <%= form.submit "検索" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+<% if @rooms.present? %>
+  <p>合計件数: <%= @rooms.count %></p>
+  <ul>
+    <% @rooms.each do |room| %>
+      <li class="list-size" >
+        <%= display_room_avatar(room, class: 'room-index-img') %>
+        <%= link_to room.name, room %>
+        <%= room.address %>
+        ¥<%= room.price %><br/>
+        <%= room.introduction %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>該当する部屋はありません。</p>
+<% end %>
+</div>

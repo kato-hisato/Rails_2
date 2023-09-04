@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  display: block;
+}
+
+.nav-ber {
+  background-color: #1c1d3b;
+  height: 80px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.nav-title{
+  color: #fff;
+  display: grid;
+  align-items: center;
+  font-size: 30px;
+}
+
+.btn-head {
+  color: #fff;
+  padding-right: 10px;
+}
+
+.btn-img {
+  border-radius: 60px;
+  margin-right: 8px;
+  width: 40px;
+}
+
+.btn-name {
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  display: inline;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 26px;
+  border: 1px solid #ccc;
+  z-index: 999;
+  min-width: 122px;
+  padding: 9px 0;  
+}
+
+.btn-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 5%;
+  
+}
+
+.btn-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drop-list {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 8px;
+}
+
+.room-index-img {
+  border-radius: 10px;
+  width: 100px;
+}
+
+.room-show-img {
+  border-radius: 10px;
+  width: 80%;
+  display: grid;
+  place-items: center;
+}
+
+.table-tr {
+  text-align: left;
+  width: 50%;
+}
+
+.top-title {
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
+
+.FirstViewSearch {
+  padding: 20px;
+  width: 95%;
+  margin: auto;
+}
+
+.form-container {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.form-controler {
+  width: 96%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  height: 58px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center; 
+}
+
+.FirstViewSearch__button {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  height: 58px;
+  font-size: 18px;
+  background-color: #ff7757;
+  color: #fff;
+  width: 100%;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-link {
+  margin-bottom: 10px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.info-section {
+  text-align: center;
+  display: inline;
+}
+
+.info-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+  display: inline;
+}
+
+.info-value {
+  font-size: 20px;
+  display: inline;
+  padding-left: 20px;
+}
+
+.link-edit {
+  color: white;
+  background-color: rgb(70, 76, 235);
+  display: inline;
+  border : solid 3px;
+  border-radius: 8px;
+  border-color: rgb(70, 76, 235);
+  background-color: rgb(70, 76, 235);
+  padding: 10px 10px;
+  margin-left: 20px;
+}
+
+.form-control {
+  width: 30%; 
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;   
+}
+
+td {
+  padding-right: 30px;
+}
+
+.form-show {
+  width: 100%;
+}
+
+.header-field {
+  width: 100%;
+  height: 10%;
+  background-color: rgba(137, 137, 163, 0.444);
+  margin: auto;
+  padding: 10px;
+}
+
+.search-field {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+}
+
+.list-size {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.RecommendAreas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.RecommendArea {
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  margin: auto;
+}
+
+.Area_search__button {
+  background-color:  #4cf30a;
+  border-radius: 26px;
+  padding: 20px 60px;
+  font-size: larger;
+
+}

@@ -1,0 +1,26 @@
+<h1>アカウント情報</h1>
+
+<div class="profile-link">
+    <%= link_to "プロフィール確認へ", profile_show_path %>
+    <%= link_to "編集", "/users/edit" , class: "link-edit" %>
+</div>
+
+<% if flash[:notice] %>
+  <p class="notice subTitle"><%= flash[:notice] %></p>
+<% end %>
+
+<div class="user-profile">
+  <div class="info-container">
+    <div class="info-section">
+      <h3 class="info-title">メールアドレス</h3>
+      <p class="info-value"><%= @user.email %></p>
+    </div>
+
+    <div class="info-section">
+      <h3 class="info-title">パスワード</h3>
+      <p class="info-value">**********</p>
+    </div>
+  </div>
+</div>
+
+

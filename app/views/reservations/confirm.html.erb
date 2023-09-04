@@ -1,0 +1,21 @@
+<h1>予約確認画面</h1>
+
+<div class="container">
+  <%= form_with(model: @reservation, url: reservations_path(@room)) do |f| %>
+    <%= f.hidden_field :start_day %>
+    <%= f.hidden_field :end_day %>
+    <%= f.hidden_field :people %>
+    <%= f.hidden_field :price %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :room_id %>
+
+    <p>以下の情報で予約を確定します。よろしいですか？</p>
+    <p>チェックイン日: <%= @reservation.start_day %></p>
+    <p>チェックアウト日: <%= @reservation.end_day %></p>
+    <p>宿泊日数: <%= (@reservation.end_day - @reservation.start_day).to_i %>日</p>
+    <p>人数: <%= @reservation.people %>人</p>
+    <p>支払い金額: ¥<%= @reservation.price %></p>
+
+    <%= f.submit "予約を確定" %>
+  <% end %>
+</div>
